@@ -1,0 +1,392 @@
+version: "2.0"
+nlu:
+#- regex: topn
+ # examples: |
+  #  - \d
+- intent: location
+  examples: |
+    - [nabeul](location)
+    - [tunis](location)
+    - [sfax](location)
+    - [monastir](location)
+    - [sousse](location)
+    - [ariana](location)
+    - [ben arous](location)
+    - [beja](location)
+    - [kasserine](location)
+    - [kairouane](location)
+    - [tozeur](location)
+    - [tataouine](location)
+    - [bizerte](location)
+    - [gabes](location)
+    - [jendouba](location)
+    - [kebili](location)
+    - [kef](location)
+    - [mahdia](location)
+    - [mannouba](location)
+    - [medenin](location)
+    - [sidi bouzid](location)
+    - [siliana](location)
+    - [zaghouane](location)
+
+- intent: type
+  examples: | 
+    - [auction](aucten)
+    - [call for tender](aucten)
+
+- intent: topnrec
+  examples: | 
+    - [one](topn)
+    - [two](topn)
+    - [three](topn) 
+    - [four](topn)
+    - [five](topn)
+- intent: other
+  examples: |
+    - other
+    - other options
+    - other keywords
+    - show me others
+    - may i see other keyword options
+- intent: more
+  examples: |
+    - more
+    - show me more
+    - i want to see more options 
+    - give me more keywords
+    - may you show me more keywords
+- intent: yup
+  examples: |
+    - yes
+    - okey let it be 
+    - i agree 
+    - i want that
+- intent: nope
+  examples: |
+    - no
+- intent: keyword1
+  examples: |
+    - [work](keyword1)
+    - i choose [work](keyword1)
+    - [work] is suitable(keyword1)
+- intent: keyword2
+  examples: |
+    - [service](keyword2)
+    - [service] is my choice(keyword2)
+- intent: keyword3
+  examples: |
+    - [aquisition](keyword3)
+    - the keyword for me is [aquisition](keyword3)
+- intent: keyword4
+  examples: |
+    - [study](keyword4)
+    - let it be [study](keyword4)
+    - [study] is the best (keyword4)
+- intent: keyword5
+  examples: |
+    - [development](keyword5)
+    - the best match is [development](keyword5)
+    - in my mind it's [development](keyword5)
+    - keyword [development] is suitable (keyword5)
+    - i choose [development](keyword5)
+    - my preferable is [development](keyword5)
+    - the keyword [development](keyword5) 
+- intent: keyword6
+  examples: |
+    - i think [maintenance] works fine(keyword6)
+    - [maintenance](keyword6)
+    - must be [maintenance](keyword6)
+- intent: keyword7
+  examples: |
+    - the most suitable is [accessory](keyword7)
+    - [accessory](keyword7)
+    - [accessory] is the perfect keyword(keyword7)
+    - [accessory] is perfect! (keyword7)
+- intent: keyword8
+  examples: |
+    - it's fine with [road](keyword8)
+    - [road](keyword8)
+    - my keyword is[road](keyword8)
+- intent: keyword9
+  examples: |
+    - [construction] does the trick(keyword9)
+    - [construction](keyword9)
+    - [construction] it is the needed keyword(keyword9)
+- intent: keyword10
+  examples: |
+    - let's try with [transport](keyword10)
+    - [transport](keyword10)
+    - [transport] matches well (keyword10)
+- intent: keyword11
+  examples: |
+    - i choose [management] as a keyword(keyword11)
+    - [management](keyword11)
+    - [management] is okey(keyword11)
+- intent: keyword12
+  examples: |
+    - carry on with [equipment](keyword12)
+    - [equipment](keyword12)
+    - sure ! [equipment](keyword12)
+
+  
+ 
+   
+#- intent: keyword2
+#  examples: |
+ #   - [development](keyword2)
+ #   - [maintenance](keyword2)
+  #  - [program](keyword2)
+  #  - [closed_envelope](keyword2) 
+- intent: search
+  examples: |
+    - i want to search for something
+    - searching ! 
+    - i would love to look for something 
+    - let's search for
+    - i'm looking for a 
+    - look
+    - look for something
+- intent: rec
+  examples: |
+    - i want recommendations
+    - i want rec
+    - recommendation
+    - please recommand !    
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: register
+  examples: |
+    - I want to get register
+    - what is the registeration process
+    - Guide me with the registeration process
+    - How to get register for this ML course
+    - Register me
+    - Registeration process
+    - Please register me for AI program
+
+- intent: thanks
+  examples: |
+    - thankyou
+    - thanks
+    - thank you
+    - Thanks
+    - Thank You
+    - that's it
+    - no thanks
+    - i am good with it
+    - thanks for your help
+
+    
+    
+
+- intent: bye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: ask_mood
+  examples: |
+    - how are you
+    - what's up ? 
+    - wuts up?
+    - whts goin on ? 
+    - whats is going on?
+    - how are you doing ? 
+    - are you doing good?
+    - is everything good with you ? 
+    - how is your mood? 
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+
+#- intent: send_email
+#  examples: |
+ #   - [hemden@gmail.com](email)
+  #  - [rahmahemd@gmail.com](email)
+   # - [amineh@gmail.com](email)
+    #- [abdelbasset@gmail.com](email)
+   # - [marwen344@gmail.com](email)
+  #  - [stagepfe2021@gmail.com](email)
+  #  - [hemdenrahma34@gmail.com](email)
+ 
+- regex: email
+  examples: |
+    - [A-z0-9._%+-]+@[A-z0-9.-]+\\.[A-z.]{2,4}
+- intent: email_send
+  examples: |
+    - my email is [hemden@gmail.com](email)
+    - This is my email [rahmahemd@gmail.com](email)
+    - [amineh@gmail.com](email)
+    - [abdelbasset@gmail.com](email)
+    - [stagepfe2021@gmail.com](email)
+    - [hemdenrahma34@gmail.com](email)
+    - [maxmeier@gamil.com](email)
+    - [poddut@gmail.com](email)
+    - [maxmeier@gmail.com](email)
+    - [bot-fan@gmail.com](email)
+    - [virat@gmail.com](email)
+    - [vishnu@gmail.com](email)
+    -  email is [email@gmail.com](email)
+    - [sharmarohit11@gmail.com](email)
+    - email id is [marwenhem@gmail.com](email)
+    - here is my mail [abdelbasset@gmail.com](email)
+    - mail [bharkorba@gmail.com](email)
+    - i'll give you my mail [ghofranh52@gmail.com](email)
+    - here is my email [shabharmal1@gmail.com](email)
+    - [gucci@gmail.com](email)
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am i talking to a bot ?
+    - is it a human that i'm talking to ? or a bot ?
+- intent: movetomail
+  examples: |
+    - sure thing
+    - yes please
+    - i would love to 
+    - send it by mail
+- intent: sendithere
+  examples: |
+    - no stay here
+    - no
+    - send it here
+    - no need
+    - i think here is better
+  
+- intent: get_info
+  examples: |
+    - i want to ask a question
+    - i need to know about few things
+    - may you give me some information
+    - please answer my following question
+- intent: tenderq
+  examples: |
+    - i choose to know about tender
+    - i have a question about tender
+    - i wonder about tender
+    - tender question
+- intent: auctionq
+  examples: |
+    - i want to ask about auctions
+    - i have a question about auctions
+    - i wonder about auctions
+    - auction question 
+
+- intent: deftender
+  examples: |
+    - define a tender
+    - what is a tender?
+    - explain a tender!
+    - what does tender mean ? 
+    - what does tender imply ?
+    - what's the meaning of a tender?
+    - what's the explaination of a tender?
+- intent: defauction
+  examples: |
+    - i would like to know what's an auction !
+    - what's an auction?
+    - define auctions
+    - may you explain auctions to me ! 
+    - Could you please clarify auctions to me?
+    - I'm curious as to what an auction is.
+- intent: TunisiansAbroad
+  examples: |
+    - Tunisians Abroad
+    - Tunisians Abroad is close 
+    - about Tunisians Abroad
+- intent: DirectionOrigin
+  examples: |
+    - Direction Origin
+    - go for Direction Origin
+    - let's go ahead by Direction Origin
+- intent: Fiscal advantages
+  examples: |
+    - Fiscal advantages
+    - i choose Fiscal 
+    - Fiscal advantages plz
+- intent: Economic Operators
+  examples: |
+    - Economic Operators
+    - Economic Operators is best
+    - Economic Operators for sure
+
+- intent: great
+  examples: |
+    - very helpful ! 😍
+    - i loved it 
+    - fantastic
+    - amazing
+    - amaazing
+    - amazzziinng
+    - Greaaaat
+- intent: good
+  examples: |
+    - Good ! 😄
+    - nice 😄
+    - niiice 
+    - goooood
+    - niiceeeee
+- intent: bad
+  examples: |
+    - could be better ! 😐
+    -  medium😐
+
+
+
+- intent: terrible
+  examples: |
+    - terrible! 😣
+    - terribbblle
+    - teriiiiible
+    - the worse 
+    - the woooorse    
+
+#- intent: tunabroadq1
+ # examples: |
+  #  - What is the transport document?

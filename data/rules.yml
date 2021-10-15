@@ -1,0 +1,432 @@
+version: "2.0"
+rules:
+- rule: rec form1
+  steps:
+  - intent: rec
+  - action: utter_ask_keyword
+- rule: keyword1form
+  steps:
+  - intent: keyword1
+  - action: keyword1_form
+  - active_loop: keyword1_form
+
+- rule: Submit keyword1
+  condition:
+  # Condition that form is active.
+  - active_loop: keyword1_form
+  steps:
+  # Form is deactivated
+  - action: keyword1_form
+  - active_loop: null
+  - slot_was_set:
+    - keyword1: null
+  # The actions we want to run when the form is submitted.
+  - action: action_keyword1
+  - action: utter_other
+  #- action: utter_ask_categorie
+####keyword fillig
+- rule: keyword2_form
+  steps:
+  - intent: keyword2
+  - action: keyword2_form
+  - active_loop: keyword2_form
+
+- rule: Submit keyword2
+  condition:
+  # Condition that form is active.
+  - active_loop: keyword2_form
+  steps:
+  # Form is deactivated
+  - action: keyword2_form
+  - active_loop: null
+  - slot_was_set:
+    - keyword2: null
+  # The actions we want to run when the form is submitted.
+  - action: action_keyword2
+  - action: utter_other
+- rule: keyword3_form
+  steps:
+  - intent: keyword3
+  - action: keyword3_form
+  - active_loop: keyword3_form
+
+- rule: Submit keyword3
+  condition:
+  # Condition that form is active.
+  - active_loop: keyword3_form
+  steps:
+  # Form is deactivated
+  - action: keyword3_form
+  - active_loop: null
+  - slot_was_set:
+    - keyword3: null
+  # The actions we want to run when the form is submitted.
+  - action: action_keyword3
+  - action: utter_other
+- rule: keyword4form
+  steps:
+  - intent: keyword4
+  - action: keyword4_form
+  - active_loop: keyword4_form
+
+- rule: Submit keyword4
+  condition:
+  # Condition that form is active.
+  - active_loop: keyword4_form
+  steps:
+  # Form is deactivated
+  - action: keyword4_form
+  - active_loop: null
+  - slot_was_set:
+    - keyword4: null
+  # The actions we want to run when the form is submitted.
+  - action: action_keyword4
+  - action: utter_other
+  #- action: utter_ask_topn
+
+- rule: keyword5form
+  steps:
+  - intent: keyword5
+  - action: keyword5_form
+  - active_loop: keyword5_form
+
+- rule: Submit keyword5
+  condition:
+  # Condition that form is active.
+  - active_loop: keyword5_form
+  steps:
+  # Form is deactivated
+  - action: keyword5_form
+  - active_loop: null
+  - slot_was_set:
+    - keyword5: null
+  # The actions we want to run when the form is submitted.
+  - action: action_keyword5
+  - action: utter_other
+- rule: keyword6form
+  steps:
+  - intent: keyword6
+  - action: keyword6_form
+  - active_loop: keyword6_form
+
+- rule: Submit keyword6
+  condition:
+  # Condition that form is active.
+  - active_loop: keyword6_form
+  steps:
+  # Form is deactivated
+  - action: keyword6_form
+  - active_loop: null
+  - slot_was_set:
+    - keyword6: null
+  # The actions we want to run when the form is submitted.
+  - action: action_keyword6
+  - action: utter_other
+- rule: keyword7form
+  steps:
+  - intent: keyword7
+  - action: keyword7_form
+  - active_loop: keyword7_form
+
+- rule: Submit keyword7
+  condition:
+  # Condition that form is active.
+  - active_loop: keyword7_form
+  steps:
+  # Form is deactivated
+  - action: keyword7_form
+  - active_loop: null
+  - slot_was_set:
+    - keyword7: null
+  # The actions we want to run when the form is submitted.
+  - action: action_keyword7
+  - action: utter_other
+- rule: keyword8form
+  steps:
+  - intent: keyword8
+  - action: keyword8_form
+  - active_loop: keyword8_form
+
+- rule: Submit keyword8
+  condition:
+  # Condition that form is active.
+  - active_loop: keyword8_form
+  steps:
+  # Form is deactivated
+  - action: keyword8_form
+  - active_loop: null
+  - slot_was_set:
+    - keyword8: null
+  # The actions we want to run when the form is submitted.
+  - action: action_keyword8
+  - action: utter_other
+- rule: keyword9form
+  steps:
+  - intent: keyword9
+  - action: keyword9_form
+  - active_loop: keyword9_form
+
+- rule: Submit keyword9
+  condition:
+  # Condition that form is active.
+  - active_loop: keyword9_form
+  steps:
+  # Form is deactivated
+  - action: keyword9_form
+  - active_loop: null
+  - slot_was_set:
+    - keyword9: null
+  # The actions we want to run when the form is submitted.
+  - action: action_keyword9
+  - action: utter_other
+- rule: keyword10form
+  steps:
+  - intent: keyword10
+  - action: keyword10_form
+  - active_loop: keyword10_form
+
+- rule: Submit keyword10
+  condition:
+  # Condition that form is active.
+  - active_loop: keyword10_form
+  steps:
+  # Form is deactivated
+  - action: keyword10_form
+  - active_loop: null
+  - slot_was_set:
+    - keyword10: null
+# The actions we want to run when the form is submitted.
+  - action: action_keyword10
+  - action: utter_other
+- rule: keyword11form
+  steps:
+  - intent: keyword11
+  - action: keyword11_form
+  - active_loop: keyword11_form
+
+- rule: Submit keyword11
+  condition:
+  # Condition that form is active.
+  - active_loop: keyword11_form
+  steps:
+  # Form is deactivated
+  - action: keyword11_form
+  - active_loop: null
+  - slot_was_set:
+    - keyword11: null
+  # The actions we want to run when the form is submitted.
+  - action: action_keyword11
+  - action: utter_other
+- rule: keyword12form
+  steps:
+  - intent: keyword12
+  - action: keyword12_form
+  - active_loop: keyword12_form
+
+- rule: Submit keyword12
+  condition:
+  # Condition that form is active.
+  - active_loop: keyword12_form
+  steps:
+  # Form is deactivated
+  - action: keyword12_form
+  - active_loop: null
+  - slot_was_set:
+    - keyword12: null
+  # The actions we want to run when the form is submitted.
+  - action: action_keyword12
+  - action: utter_other
+  
+- rule: after
+  steps:
+  - intent: nope
+  - action: utter_ask_topn
+- rule: afterr
+  steps:
+  - intent: yup
+  - action: utter_ask_keyword
+- rule: continuefilling
+  steps:
+  - intent: topnrec
+  - action: topn_form
+  - active_loop: topn_form
+- rule: submit topn
+  condition:
+  - active_loop: topn_form
+  steps:
+  # Form is deactivated
+  - action: topn_form
+  - active_loop: null
+  - slot_was_set:
+    - topn: null
+#  - action: utter_topn
+  - action: action_submittopn
+  - action: utter_ask_wait
+  - action: action_rec
+  - action: utter_again
+
+
+
+- rule: searchform1
+  steps:
+  - intent: search
+  - action: utter_ask_aucten
+
+- rule: typesearch
+  steps:
+  - intent: type
+  - action: aucten_form
+  - active_loop: aucten_form
+
+- rule: submit type
+  condition:
+  - active_loop: aucten_form
+  steps:
+  # Form is deactivated
+  - action: aucten_form
+  - active_loop: null
+  - slot_was_set:
+    - aucten: null
+#  - action: utter_topn
+  - action: action_submitaucten
+  - action: utter_ask_location
+
+- rule: locationfilling
+  steps:
+  - intent: location
+  - action: location_form
+  - active_loop: location_form
+- rule: submit location
+  condition:
+  - active_loop: location_form
+  steps:
+  # Form is deactivated
+  - action: location_form
+  - active_loop: null
+  - slot_was_set:
+    - location: null
+  #  - action: utter_topn
+  - action: action_submitlocation
+  - action: action_cifexist 
+  #- action: utter_again
+- rule: checkmail
+  steps:
+   - intent: sendithere
+   - action: action_result
+   - action: utter_again
+- rule: checkmail2
+  steps:
+   - intent: movetomail
+   - action: utter_ask_email
+
+
+- rule: emailfilling
+  steps:
+  - intent: email_send
+  - action: email_form
+  - active_loop: email_form
+- rule: submit email
+  condition:
+  - active_loop: email_form
+  steps:
+  # Form is deactivated
+  - action: email_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: email
+  #  - action: utter_topn
+  - action: action_submitemail
+  - action: action_search
+  - action: utter_again
+- rule: bye
+  steps:
+  - intent: bye
+  - action: utter_bye
+
+- rule: great
+  steps:
+  - intent: great
+  - action: utter_great
+- rule: good
+  steps:
+  - intent: good
+  - action: utter_good
+- rule: could be better
+  steps:
+  - intent: could be better
+  - action: utter_could be better
+- rule: terrible
+  steps:
+  - intent: terrible
+  - action: utter_terrible
+
+
+- rule: getinfo_form
+  steps:
+  - intent: get_info
+  - action: action_carousels
+#utter_ask_infotenderauction
+
+- rule: answerdeftender
+  steps:
+  - intent: deftender 
+  - action: utter_deftender
+
+- rule: answerdefauction
+  steps:
+  - intent: defauction
+  - action: utter_defauction
+
+- rule: auctionsq
+  steps:
+  - intent: auctionq
+  - action: utter_defauction
+
+
+- rule: 
+  steps:
+  - intent: TunisiansAbroad
+  - action: utter_TunisiansAbroad
+- rule: 
+  steps:
+  - intent: DirectionOrigin
+  - action: utter_DirectionOrigin 
+
+- rule: 
+  steps:
+  - intent: EconomicOperators
+  - action: utter_EconomicOperators
+- rule: 
+  steps:
+  - intent: Fiscaladvantages
+  - action: utter_Fiscaladvantages 
+  
+#- rule: out-of-scope
+ # steps:
+  #- intent: nlu_fallback
+  #- action: utter_out_of_scope
+
+#- rule: otherkeyword2
+ # steps:
+#  - intent: other
+ # - action: utter_ask_keyword2
+#- rule: keyword2 form
+ # steps:
+  #- intent: keyword2
+ # - action: keyword2_form
+  #- active_loop: keyword2_form
+
+#- rule: Submit Project form
+#  condition:
+  # Condition that form is active.
+ # - active_loop: keyword2_form
+  #steps:
+  # Form is deactivated
+#  - action: keyword2_form
+#  - active_loop: null
+#  - slot_was_set:
+ #   - keyword2: null
+  # The actions we want to run when the form is submitted.
+  #- action: action_submitkeyword2
+  
+  #- action: utter_ask_topn
