@@ -1,0 +1,495 @@
+version: "2.0"
+intents:
+ - action_carousels
+ - good
+ - terrible
+ - great
+ - bad
+ - TunisiansAbroad
+ - EconomicOperators
+ - Fiscaladvantages
+ - DirectionOrigin
+ - deftender
+ - defauction
+ - auctionq
+ - tenderq
+ - get_info
+ - sendithere
+ - movetomail
+ - yup
+ - nope
+ - keyword1
+ - keyword2
+ - keyword3
+ - keyword4
+ - keyword5
+ - keyword6
+ - keyword7
+ - keyword8
+ - keyword9
+ - keyword10
+ - keyword11
+ - keyword12
+ - more
+ - other
+ - Studies
+ - works
+ - Supplyofgoods
+ - services
+ - categorie
+ - email_send
+ - location
+ - topnrec
+ - rec
+ - search
+ - type
+ - greet
+ - thanks
+ - bye
+ - affirm
+ - deny
+ - bot_challenge
+ - register
+ - send_email
+ - ask_mood
+actions:
+ - action_carousels 
+ - action_result
+ - action_cifexist
+ - action_keyword2
+ - action_keyword1
+ - action_keyword3
+ - action_keyword4
+ - action_keyword5
+ - action_keyword6
+ - action_keyword7
+ - action_keyword8
+ - action_keyword9
+ - action_keyword10
+ - action_keyword11
+ - action_keyword12
+ - action_submitcategorie
+ - action_greetings
+ - utter_greet
+ - utter_thanks
+ - utter_bye
+ - utter_affirm
+ - utter_deny
+ - utter_iamabot
+ - validate_register_form
+ - action_submitregister
+ - validate_topn_form
+ - action_submittopn
+ - action_rec
+ - action_submitaucten
+ - validate_aucten_form
+ - validate_location_form
+ - action_submitlocation
+ - action_search
+ - action_submitemail
+ - validate_email_form
+ - utter_TunisiansAbroad
+ - utter_DirectionOrigin
+ - utter_Fiscaladvantages
+ - utter_EconomicOperators
+forms:
+ email_form:
+  email:
+   - type: from_text 
+ keyword1_form:
+  keyword1:
+   - type: from_entity
+     entity: keyword1
+ keyword2_form:
+  keyword2:
+   - type: from_entity
+     entity: keyword2
+ keyword3_form:
+  keyword3:
+   - type: from_entity
+     entity: keyword3
+ keyword4_form:
+  keyword4:
+   - type: from_entity
+     entity: keyword4
+ keyword5_form:
+  keyword5:
+   - type: from_entity
+     entity: keyword5
+ keyword6_form:
+  keyword6:
+   - type: from_entity
+     entity: keyword6
+ keyword7_form:
+  keyword7:
+   - type: from_entity
+     entity: keyword7
+ keyword8_form:
+  keyword8:
+   - type: from_entity
+     entity: keyword8
+ keyword9_form:
+  keyword9:
+   - type: from_entity
+     entity: keyword9
+ keyword10_form:
+  keyword10:
+   - type: from_entity
+     entity: keyword10
+ keyword11_form:
+  keyword11:
+   - type: from_entity
+     entity: keyword11
+ keyword12_form:
+  keyword12:
+   - type: from_entity
+     entity: keyword12
+ categorie_form:
+  categorie:
+   - type: from_entity
+     entity: categorie
+ topn_form:
+  topn:
+   - type: from_entity
+     entity: topn
+ aucten_form:
+  aucten:
+   - type: from_entity
+     entity: aucten
+ location_form:
+  location:
+   - type: from_entity
+     entity: location
+ 
+entities:
+   - topn
+   - keyword1 
+   - keyword2
+   - keyword3
+   - keyword4
+   - keyword5
+   - keyword6
+   - keyword7
+   - keyword8
+   - keyword9
+   - keyword10
+   - keyword11
+   - keyword12
+   - aucten
+   - location
+   - email
+   - categorie
+  
+slots:
+ email:
+  type: text
+  influence_conversation: true
+ keyword1:
+  type: text
+  influence_conversation: false
+ keyword2:
+  type: text
+  influence_conversation: false
+ keyword3:
+  type: text
+  influence_conversation: false
+ keyword4:
+  type: text
+  influence_conversation: false
+ keyword5:
+  type: text
+  influence_conversation: false
+ keyword6:
+  type: text
+  influence_conversation: false
+ keyword7:
+  type: text
+  influence_conversation: false
+ keyword8:
+  type: text
+  influence_conversation: false
+ keyword9:
+  type: text
+  influence_conversation: false
+ keyword10:
+  type: text
+  influence_conversation: false
+ keyword11:
+  type: text
+  influence_conversation: false
+ keyword12:
+  type: text
+  influence_conversation: false
+ topn:
+  type: text
+  influence_conversation: false 
+ aucten:
+  type: text
+  influence_conversation: false
+ location:
+  type: text
+  influence_conversation: false
+ categorie:
+  type: text
+  influence_conversation: false
+     
+
+responses:
+ utter_other:
+ - buttons:
+   - payload: /yup
+     title: "yes"
+   - payload: /nope
+     title: "no"
+   text: would you want to choose other keyword ?
+ utter_again:
+ - buttons:
+   - payload: /bye
+     title: "goodbye"
+   - payload: "/search"
+     title: "make a search"
+   - payload: "/rec"
+     title: "see recommendations"
+   - payload: "/get_info"
+     title: "frequently asked questions"
+   text: what do you want to do now ? 
+ utter_email:
+  - text: " ur email is : {email} "
+ utter_ask_email:
+  - text: " Can you provide me your email address, I need it to send you the result "
+ utter_notype:
+  - text: "there is no offer with this type"
+ utter_location:
+  - text: "ow {location} !  i like the views there 😍"
+ utter_ask_location:
+ - buttons:
+   - payload: /location{{"location":"tunis"}}
+     title: "tunis"
+   - payload: /location{{"location":"ariana"}}
+     title: "ariana"
+   - payload: /location{{"location":"nabeul"}}
+     title: "nabeul"
+   - payload: /location{{"location":"sfax"}}
+     title: "sfax"
+   - payload: /location{{"location":"sousse"}}
+     title: "sousse"
+   - payload: /location{{"location":"monastir"}}
+     title: "monastir"
+   - payload: /location{{"location":"mahdia"}}
+     title: "mahdia"
+   - payload: /location{{"location":"zaghouane"}}
+     title: "zaghouane"
+   - payload: /location{{"location":"beja"}}
+     title: "beja"
+   - payload: /location{{"location":"ben arous"}}
+     title: "ben arous"
+   - payload: /location{{"location":"bizerte"}}
+     title: "bizerte"
+   - payload: /location{{"location":"gabes"}}
+     title: "gabes"
+   - payload: /location{{"location":"kairouane"}}
+     title: "kairouane"
+   - payload: /location{{"location":"jendouba"}}
+     title: "jendouba"
+   - payload: /location{{"location":"kasserine"}}
+     title: "kasserine"
+   - payload: /location{{"location":"kebili"}}
+     title: "kebili"
+   - payload: /location{{"location":"kef"}}
+     title: "kef"
+   - payload: /location{{"location":"mannouba"}}
+     title: "mannouba"
+   - payload: /location{{"location":"mednin"}}
+     title: "mednin"
+   - payload: /location{{"location":"sidi bouzid"}}
+     title: "sidi bouzid"
+   - payload: /location{{"location":"siliana"}}
+     title: "siliana"
+   - payload: /location{{"location":"tozeur"}}
+     title: "tozeur" 
+   text: "may you tell me which state you live in?"
+ utter_aucten:
+  - text: "your choice is {aucten}"
+ utter_ask_aucten:
+ - buttons:
+   - payload: /type{{"aucten":"auction"}}
+     title: "auction"
+   - payload: /type{{"aucten":"call for tender"}}
+     title: "call for tender"
+   text: "may you choose the type ? " 
+ utter_ask_wait:
+  - text: "finding {topn} recommendations  ! please wait..."
+ utter_ask_topn:
+ - buttons:
+   - payload: /topnrec{{"topn":"one"}}
+     title: "one"
+   - payload: /topnrec{{"topn":"two"}}
+     title: "two"
+   - payload: /topnrec{{"topn":"three"}}
+     title: "three"
+   - payload: /topnrec{{"topn":"four"}}
+     title: "four"
+   - payload: /topnrec{{"topn":"five"}}
+     title: "five"
+   text: "may you choose the number of top recommendations you want to receive ? "
+ utter_topnnotvalid:
+  - text: " number must be less than 5"
+ utter_topn:
+  - text: "your choice is {topn}"
+ utter_greet:
+  - text: "Welcome !"
+ utter_first_message:
+ - buttons:
+   - payload: "/search"
+     title: "make a search"
+   - payload: "/rec"
+     title: "see recommendations"
+   - payload: "/get_info"
+     title: "frequently asked questions"
+   text: "My name is AFFARIYET and i'm your bot ! would you want to"
+ utter_ask_keyword:
+ - buttons:
+   - payload: /keyword1{{"keyword1":"work"}}
+     title: "work"
+   - payload: /keyword2{{"keyword2":"service"}}
+     title: "service"
+   - payload: /keyword3{{"keyword3":"aquisition"}}
+     title: "aquisition"
+   - payload: /keyword4{{"keyword4":"study"}}
+     title: "study"
+   - payload: /keyword5{{"keyword5":"development"}}
+     title: "development"
+   - payload: /keyword6{{"keyword6":"maintenance"}}
+     title: "maintenance"
+   - payload: /keyword9{{"keyword9":"construction"}}
+     title: "construction"
+   - payload: /keyword12{{"keyword12":"equipment"}}
+     title: "equipment"
+   - payload: /keyword10{{"keyword10":"transport"}}
+     title: "transport"
+   - payload: /keyword8{{"keyword8":"road"}}
+     title: "road"
+   - payload: /keyword7{{"keyword7":"accessory"}}
+     title: "accessory"
+   - payload: /keyword11{{"keyword11":"management"}}
+     title: "management"
+  # - payload: /other
+  #   title: "other keywords"
+   text: "may you choose a keyword !"
+ utter_ask_keyword2:
+ - buttons:
+   - payload: /keyword{{"keyword2":"development"}}
+     title: "development"
+   - payload: /keyword{{"keyword2":"maintenance"}}
+     title: "maintenance"
+   - payload: /keyword{{"keyword2":"program"}}
+     title: "program"
+   - payload: /keyword{{"keyword2":"closed_envelope"}}
+     title: "closed_envelope"
+   - payload: /more
+     title: "more keywords"
+   text: "here are other options!"
+ #utter_returnvalues:
+ # - text: " finding {topn} recommendations for the keyword {keyword}"
+ utter_thanks:
+  - text: "welcome"
+ utter_bye:
+ - buttons:
+   - payload: /great
+     title: "very helpful ! 😍"
+   - payload: /good
+     title: " good 😄"
+   - payload: /bad
+     title: "could be better 😐"
+   - payload: /terrible
+     title: "Terrible ! 😣"
+   text: "Can you please rate your experience with us !"
+ utter_great:
+  - text: "happy for that ! 😊"
+ utter_good:
+  - text: "thank you ! 😊"  
+ utter_could be better:
+  - text: "I will keep on learning ! 😊" 
+ utter_terrible:
+  - text: "Sorry for that ! i'll try my best next time!  😊" 
+ utter_deny:
+  - text: "no"
+ utter_iamabot:
+  - text: "I am a Bot and I am happy to help you"
+ utter_details_keyword1:
+  - text: " your choice is : {keyword1} !"
+ utter_details_keyword2:
+  - text: " your choice is : {keyword2} !"
+ utter_details_keyword3:
+  - text: " your choice is : {keyword3} !"
+ utter_details_keyword4:
+  - text: " your choice is : {keyword4} !"
+ utter_details_keyword5:
+  - text: " your choice is : {keyword5} !"
+ utter_details_keyword6:
+  - text: "your choice is : {keyword6} !"
+ utter_details_keyword7:
+  - text: " your choice is : {keyword7} !"
+ utter_details_keyword8:
+  - text: " your choice is : {keyword8} !"
+ utter_details_keyword9:
+  - text: " your choice is : {keyword9} !"
+ utter_details_keyword10:
+  - text: " your choice is : {keyword10} !"
+ utter_details_keyword11:
+  - text: " your choice is : {keyword11} !"
+ utter_details_keyword12:
+  - text: " your choice is : {keyword12} !"
+ utter_categorie:
+  - text: " your choice is : {categorie} !"
+ utter_default:
+  - text: "Sorry, I didn't get what you said. Please rephrase what you said."
+ utter_mail:
+ - buttons:
+   - payload: /movetomail
+     title: "send me mail"
+   - payload: /sendithere
+     title: "send it here"
+   text: "okey nice ! do you want to receive your results by mail? "
+ utter_ask_infotenderauction:
+ - buttons:
+   - payload: "/auctionq"
+     title: "Auctions "
+   - payload: "/tenderq"
+     title: "tenders"
+   text: "i am here to help you get more information about auctions and tenders, please ask me ! "
+ utter_deftender:
+  - text: "you fill find a perfect explanation here https://www.youtube.com/watch?v=Z1UNwtNQipA"
+ utter_defauction:
+  - text: " you fill find a perfect explanation here https://www.youtube.com/watch?v=A-dmU53Y02Y"
+ utter_auction_cate:
+ - buttons:
+   - payload: "/TunisiansAbroad"
+     title: "Tunisians Abroad "
+   - payload: "/DirectionOrigin"
+     title: "Direction Origin"
+   - payload: "/Fiscal advantages "
+     title: "Fiscal advantages "
+   - payload: "/EconomicOperators"
+     title: "Economic Operators "
+   text: "may you choose a categorie"
+utter_TunisiansAbroad:
+ - text: "here is a link of Tunisians Abroad customs faq ! https://www.douane.gov.tn/js-support-ticket-controlpanel/faqs/3/?pagenum=1 , or else you can simply ask me " 
+utter_DirectionOrigin :
+ - text: "here is a link of Tunisians Abroad customs faq ! https://www.douane.gov.tn/js-support-ticket-controlpanel/faqs/2/ , or else you can simply ask me " 
+utter_Fiscaladvantages:
+ - text: "here is a link of Tunisians Abroad customs faq ! https://www.douane.gov.tn/js-support-ticket-controlpanel/faqs/1/ , or else you can simply ask me " 
+utter_EconomicOperators:
+ - text: "here is a link of Tunisians Abroad customs faq ! https://www.douane.gov.tn/js-support-ticket-controlpanel/faqs/4/ , or else you can simply ask me "  
+
+utter_tunabroadq1:
+ - text: "The transport document is the ticket, it is the bill of lading, it translates the proof of taking charge of the goods by the ship."
+
+
+
+
+
+
+session_config:
+ session_expiration_time: 60
+ carry_over_slots_to_new_session: true
