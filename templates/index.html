@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+	/*div.rw-message-text
+	{
+		font-size: 12px !important;
+	}*/
+	div.rw-header.rw-with-subtitle{
+		background-color: rgb(51, 95, 153) !important;
+	}
+	.rw-open-launcher{
+		background: url("https://www.captiosusaxons.com/assets/img/logoCap-axons.png") ;
+	}
+	.rw-conversation-container .rw-response{
+		background-color: light !important;
+	}
+
+	.rw-conversation-container .rw-client{
+	    background-color: rgb(51, 95, 153)!important;
+
+	}
+	.rw-widget-container .rw-launcher{
+	    background-color: rgb(51, 95, 153) !important;
+	}
+.rw-conversation-container .rw-replies {
+        display:inline-block !important
+    }
+    
+.rw-conversation-container .rw-reply{
+        background-color: rgb(241, 239, 243) !important;
+        display:block !important;
+        text-align: center !important ;
+        color: rgb(51, 95, 153) !important;
+        border-color: rgb(51, 95, 153)!important;
+				font-size: 14!important ;
+        font-weight: bold !important ;
+
+    }
+  </style>
+</head>
+<body>
+<script>!(function () {
+  let e = document.createElement("script"),
+    t = document.head || document.getElementsByTagName("head")[0];
+  (e.src =
+    "https://cdn.jsdelivr.net/npm/rasa-webchat@1.0.1/lib/index.js"),
+    // Replace 1.x.x with the version that you want
+    (e.async = !0),
+    (e.onload = () => {
+      window.WebChat.default(
+        { //initpayload: greet,
+          customData: { language: "en" },
+          socketPath:"/socket.io/",
+          socketUrl: "http://localhost:5005/",
+          // add other props here
+          inputTextFieldHint: "Type a message..",
+          title : 'AFFARIYET',
+          subtitle: 'Say hi and get started ! ',
+          profileAvatar: "https://www.captiosusaxons.com/assets/img/logoCap-axons.png",
+          /*openLauncherImage: '/bot.png',
+          closeLauncherImage: '/bot.png',
+          params: {
+            images: {
+              dims: {
+                width: 300,
+                height: 200,
+              }
+            },
+        },*/
+       
+      },
+        null
+      );
+    }),
+    t.insertBefore(e, t.firstChild);
+    window.localStorage.clear()
+})();
+
+</script>
+
+</body>
+</html>
